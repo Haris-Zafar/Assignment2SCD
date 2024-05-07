@@ -1,0 +1,21 @@
+name: Scheduled Tasks
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight UTC
+
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Run Maintenance Script
+        run: |
+          echo "Running maintenance tasks..."
+
+      - name: Notify Completion
+        if: always()
+        run: echo "Scheduled tasks completed successfully"
