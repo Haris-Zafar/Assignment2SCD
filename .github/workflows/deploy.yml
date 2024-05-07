@@ -34,5 +34,5 @@ jobs:
           publish-dir: './public' 
           deploy-dir: './dist'    
           deploy-message: 'Deployed using GitHub Actions'  
-          github-token: ${{ secrets.SCDAssignment2 }} 
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }} 
           enable-pull-request-comment: 'false'  
